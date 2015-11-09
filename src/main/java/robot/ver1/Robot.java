@@ -7,27 +7,27 @@ class Robot {
     /**
      * Текущая координата X.
      */
-    private int x = 0;
+    private double x = 0;
     /**
      * Текущая координата У.
      */
-    private int y = 0;
+    private double y = 0;
     /**
      * Текущий курс в (градусах).
      */
-    private int course = 0;
+    private double course = 0;
     /**
      *
      * @return x.
      */
-    public int getX() {
+    public double getX() {
         return x;
     }
     /**
      *
      * @param x Текущая координата X.
      */
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
@@ -35,7 +35,7 @@ class Robot {
      *
      * @return y.
      */
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -43,7 +43,7 @@ class Robot {
      *
      * @param y Текущая координата У.
      */
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
@@ -51,7 +51,7 @@ class Robot {
      *
      * @return course.
      */
-    public int getCourse() {
+    public double getCourse() {
         return course;
     }
 
@@ -59,7 +59,21 @@ class Robot {
      *
      * @param course Текущий курс в (градусах).
      */
-    public void setCourse(int course) {
+    public void setCourse(double course) {
         this.course = course;
+    }
+
+    /**
+     * Печать координат робота.
+     */
+    void printCoordinates(){
+        System.out.println(x + "," + y);
+    }
+    /**
+     *
+     */
+    void forward(int distance){
+        x=x+distance*Math.cos(course/180*Math.PI);
+        y=y+distance*Math.sin(course/180*Math.PI);
     }
 }
