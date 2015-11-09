@@ -73,7 +73,7 @@ class Robot {
      *
      */
     void forward(int distance){
-        x=x+distance*Math.cos(course/180*Math.PI);
-        y=y+distance*Math.sin(course/180*Math.PI);
+        x = x+distance*Math.cos(course/180*Math.PI);
+        y = y+distance*Math.sin(course/180*Math.PI);
     }
 }

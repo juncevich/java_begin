@@ -8,20 +8,25 @@ public class RobotManager {
      *
      * @param args All arguments.
      */
-    public static void main(String[] args) {
-        /**
-         * Ссылка r1 указывает на один объект.
-         */
-        Robot r1 = new Robot();
-        /**
-         * Ссылка r2 указывает на другой объект.
-         */
-        Robot r2 = new Robot();
-        r1.setX(99);
-        r2.setX(123);
+    public static void main(final String[] args) {
+        RobotManager rm = new RobotManager();
+        Robot robot = new Robot();
+        int distance = 40;
 
-        System.out.println(r1.getX());
-        System.out.println(r2.getX());
+        robot.forward(distance);
+        System.out.println("robot.getCourse() = " + robot.getCourse());
+
+        rm.changeCourse(robot);
+        System.out.println(robot.getCourse());
+    }
+
+    /**
+     * Change course.
+      * @param robot .
+     */
+    private void changeCourse(final Robot robot) {
+            robot.setCourse(180);
+    }
 
     }
-}
+
