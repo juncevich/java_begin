@@ -15,7 +15,7 @@ class Robot {
     /**
      * Текущий курс в (градусах).
      */
-    private double course = 0;
+    protected double course = 0;
 
     public Robot() {
     }
