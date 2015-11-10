@@ -18,6 +18,16 @@ public class RobotManager {
 
         rm.changeCourse(robot);
         System.out.println(robot.getCourse());
+
+        RobotExt robotExt = new RobotExt(0, 0,0 );
+        robotExt.forward(20);
+        robotExt.printCoordinates();
+        robotExt.setCourse(90);
+        robotExt.forward(20);
+        robotExt.printCoordinates();
+        robotExt.back(20);
+        robotExt.printCoordinates();
+
     }
 
     /**

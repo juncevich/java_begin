@@ -16,6 +16,8 @@ class Robot {
      * Текущий курс в (градусах).
      */
     protected double course = 0;
+    String name;
+
 
     public Robot() {
     }
@@ -23,6 +25,10 @@ class Robot {
     public Robot(double x, double y) {
         this.x = x;
         this.y = y;
+    }
+
+    public Robot(String name) {
+        this.name = name;
     }
 
     /**
@@ -84,5 +90,10 @@ class Robot {
     void forward(int distance){
         x = x+distance*Math.cos(course/180*Math.PI);
         y = y+distance*Math.sin(course/180*Math.PI);
+    }
+
+    @Override
+    public String toString() {
+        return "name= "+ name;
     }
 }
