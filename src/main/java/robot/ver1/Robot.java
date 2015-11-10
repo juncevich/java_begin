@@ -16,6 +16,10 @@ class Robot {
      * Текущий курс в (градусах).
      */
     private double course = 0;
+
+    public Robot() {
+    }
+
     /**
      *
      * @return x.
