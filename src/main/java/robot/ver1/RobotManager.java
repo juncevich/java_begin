@@ -23,6 +23,11 @@ public class RobotManager {
             robot.setCourse(robot.getCourse() + 360 / COUNT);
         }
 
+        for (int i = 0; i < 10; i++) {
+            robot.forward(SIDE);
+            robot.setCourse(robot.getCourse() + 45);
+        }
+
         // Создаем форму для отрисовки пути нашего робота
         RobotFrame rf = new RobotFrame(robot);
         rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
