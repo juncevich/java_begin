@@ -10,7 +10,7 @@ public class RobotManager {
      */
     public static void main(final String[] args) {
         RobotManager rm = new RobotManager();
-        Robot robot = new Robot();
+        Robot robot = new Robot(20, 20);
         int distance = 40;
 
         robot.forward(distance);

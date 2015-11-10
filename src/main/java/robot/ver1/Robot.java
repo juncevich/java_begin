@@ -20,6 +20,11 @@ class Robot {
     public Robot() {
     }
 
+    public Robot(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
     /**
      *
      * @return x.
