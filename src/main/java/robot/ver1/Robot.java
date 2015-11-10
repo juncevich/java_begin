@@ -1,5 +1,7 @@
 package robot.ver1;
 
+import java.util.ArrayList;
+
 /**
  *
  */
@@ -16,6 +18,7 @@ class Robot {
      * Текущий курс в (градусах).
      */
     protected double course = 0;
+    private ArrayList<RobotLine> lines = new ArrayList<RobotLine>();
     String name;
     /**
      * Робот управляется оператором.
@@ -107,8 +110,19 @@ class Robot {
      *
      */
     void forward(int distance){
+        // Запоминаем координаты робота перед перемещением
+        final double xOld = x;
+        final double yOld = y;
+        // Меняем координаты
         x = x+distance*Math.cos(course/180*Math.PI);
         y = y+distance*Math.sin(course/180*Math.PI);
+        // Запоминаем координаты пройденного пути в списке
+        // Класс List позволяет добавить объект и хранить его
+        lines.add(new RobotLine(xOld, yOld, x, y));
+    }
+
+    public ArrayList<RobotLine> getLines() {
+        return lines;
     }
 
     @Override

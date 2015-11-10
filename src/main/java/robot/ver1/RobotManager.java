@@ -1,5 +1,7 @@
 package robot.ver1;
 
+import javax.swing.*;
+
 /**
  *
  */
@@ -9,38 +11,25 @@ public class RobotManager {
      * @param args All arguments.
      */
     public static void main(final String[] args) {
-        RobotManager rm = new RobotManager();
-        Robot robot = new Robot(20, 20);
-        Robot robotTotal = new RobotTotal();
-        System.out.println(robotTotal.getClass().getName());
-        Robot robotWithName = new Robot("Robot with name.");
-        System.out.println(robotWithName.toString());
-        int distance = 40;
+        // Количество сторон многоугольника
+        final int COUNT = 12;
+        // Длина стороны
+        final int SIDE = 100;
 
-        robot.forward(distance);
-        System.out.println("robot.getCourse() = " + robot.getCourse());
+        Robot robot = new Robot(200, 50);
+        // Создаем замкнутую фигуру с количеством углов COUNT
+        for (int i = 0; i < COUNT; i++) {
+            robot.forward(SIDE);
+            robot.setCourse(robot.getCourse() + 360 / COUNT);
+        }
 
-        rm.changeCourse(robot);
-        System.out.println(robot.getCourse());
-
-        RobotExt robotExt = new RobotExt(0, 0, 0);
-        robotExt.forward(20);
-        robotExt.printCoordinates();
-        robotExt.setCourse(90);
-        robotExt.forward(20);
-        robotExt.printCoordinates();
-        robotExt.back(20);
-        robotExt.printCoordinates();
-
+        // Создаем форму для отрисовки пути нашего робота
+        RobotFrame rf = new RobotFrame(robot);
+        rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        rf.setVisible(true);
     }
 
-    /**
-     * Change course.
-      * @param robot .
-     */
-    private void changeCourse(final Robot robot) {
-            robot.setCourse(180);
-    }
 
-    }
+
+}
 
