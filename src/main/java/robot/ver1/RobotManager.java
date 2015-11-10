@@ -11,6 +11,8 @@ public class RobotManager {
     public static void main(final String[] args) {
         RobotManager rm = new RobotManager();
         Robot robot = new Robot(20, 20);
+        Robot robotWithName = new Robot("Robot with name.");
+        System.out.println(robotWithName.toString());
         int distance = 40;
 
         robot.forward(distance);
@@ -19,7 +21,7 @@ public class RobotManager {
         rm.changeCourse(robot);
         System.out.println(robot.getCourse());
 
-        RobotExt robotExt = new RobotExt(0, 0,0 );
+        RobotExt robotExt = new RobotExt(0, 0, 0);
         robotExt.forward(20);
         robotExt.printCoordinates();
         robotExt.setCourse(90);
