@@ -17,7 +17,10 @@ class Robot {
      */
     protected double course = 0;
     String name;
-
+    /**
+     * Робот управляется оператором.
+     */
+    Operator operator;
 
     public Robot() {
     }
@@ -29,6 +32,22 @@ class Robot {
 
     public Robot(String name) {
         this.name = name;
+    }
+
+    /**
+     * Можно узнать какой оператор управляет роботом
+     * @return operator .
+     */
+    public Operator getOperator() {
+        return operator;
+    }
+
+    /**
+     * Можно установить оператора для робота.
+     * @param operator .
+     */
+    public void setOperator(Operator operator) {
+        this.operator = operator;
     }
 
     /**
