@@ -1,15 +1,16 @@
-package ui;
+package ui.frame;
 
-import javax.swing.*;
-import java.awt.*;
+import ui.component.OvalComponent;
 
-/**
- * Created by Juncevich on 10.11.2015.
- */
+import javax.swing.JFrame;
+import java.awt.HeadlessException;
+
+
 public class OvalFrame extends JFrame {
     public OvalFrame() throws HeadlessException {
         OvalComponent ovalComponent = new OvalComponent();
         add(ovalComponent);
-        setBounds(200,200,300,250);
+
+        setBounds(200, 200, 300, 250);
     }
 }

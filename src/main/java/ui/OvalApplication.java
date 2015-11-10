@@ -1,10 +1,10 @@
 package ui;
 
-import javax.swing.*;
+import ui.frame.OvalFrame;
 
-/**
- * Created by Juncevich on 10.11.2015.
- */
+import javax.swing.WindowConstants;
+
+
 public class OvalApplication  {
     public static void main(String[] args) {
         OvalFrame ovalFrame = new OvalFrame();

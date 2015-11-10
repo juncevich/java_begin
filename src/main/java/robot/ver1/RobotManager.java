@@ -11,6 +11,8 @@ public class RobotManager {
     public static void main(final String[] args) {
         RobotManager rm = new RobotManager();
         Robot robot = new Robot(20, 20);
+        Robot robotTotal = new RobotTotal();
+        System.out.println(robotTotal.getClass().getName());
         Robot robotWithName = new Robot("Robot with name.");
         System.out.println(robotWithName.toString());
         int distance = 40;
