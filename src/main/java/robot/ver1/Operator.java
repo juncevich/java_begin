@@ -1,8 +1,6 @@
 package robot.ver1;
 
-/**
- * Created by Juncevich on 10.11.2015.
- */
+
 public class Operator {
     private String firstName;
     private String lastName;
