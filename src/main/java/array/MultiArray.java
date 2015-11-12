@@ -12,7 +12,11 @@ public class MultiArray {
         for (int i = 0; i < SIZE; i++) {
             // Цикл по второй размерности (вторые квадратные скобки)
             for (int j = 0; j < SIZE; j++) {
-                graph[i][j] = "# ";
+                if (i == 0 || i == SIZE - 1 || j == 0 || j == SIZE - 1) {
+                    graph[i][j] = "# ";
+                } else {
+                    graph[i][j] = "  ";
+                }
             }
         }
 
