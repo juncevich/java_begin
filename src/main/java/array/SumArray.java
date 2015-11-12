@@ -7,8 +7,8 @@ public class SumArray {
 
         int summa = 0;
 
-        for (int i = 0; i < sample.length; i++) {
-            summa += sample[i];
+        for (int aSample : sample) {
+            summa += aSample;
         }
 
         System.out.println("TOTAL: " + summa);
