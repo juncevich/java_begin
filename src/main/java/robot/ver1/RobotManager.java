@@ -2,10 +2,9 @@ package robot.ver1;
 
 import javax.swing.*;
 
-/**
- *
- */
-public class RobotManager {
+public class RobotManager
+{
+
     public static void main(String[] args)
     {
         // Количество сторон многоугольника
@@ -28,5 +27,4 @@ public class RobotManager {
         rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         rf.setVisible(true);
     }
-    }
-
+}
