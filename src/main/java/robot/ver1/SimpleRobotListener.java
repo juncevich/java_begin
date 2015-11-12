@@ -11,8 +11,5 @@ public class SimpleRobotListener implements RobotListener
     }
 
     @Override
-    public void endMove(double x, double y)
-    {
-        System.out.println("Робот закончил движение, координаты:" + x + "," + y);
-    }
+    public void endMove(double x, double y){ System.out.println("Робот закончил движение, координаты:" + x + "," + y); }
 }
