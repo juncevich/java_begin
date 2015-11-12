@@ -9,28 +9,16 @@ public class RobotManager {
      * @param args All arguments.
      */
     public static void main(final String[] args) {
-        RobotManager rm = new RobotManager();
-        Robot robot = new Robot(20, 20);
-        Robot robotTotal = new RobotTotal();
-        System.out.println(robotTotal.getClass().getName());
-        Robot robotWithName = new Robot("Robot with name.");
-        System.out.println(robotWithName.toString());
-        int distance = 40;
+        Robot[] robots = new Robot[10];
 
-        robot.forward(distance);
-        System.out.println("robot.getCourse() = " + robot.getCourse());
+        for (int i = 0; i < robots.length; i++) {
+            robots[i]= new Robot(i*10, i*10);
 
-        rm.changeCourse(robot);
-        System.out.println(robot.getCourse());
+        }
 
-        RobotExt robotExt = new RobotExt(0, 0, 0);
-        robotExt.forward(20);
-        robotExt.printCoordinates();
-        robotExt.setCourse(90);
-        robotExt.forward(20);
-        robotExt.printCoordinates();
-        robotExt.back(20);
-        robotExt.printCoordinates();
+        for (int i = 0; i < robots.length; i++) {
+            robots[i].printCoordinates();
+        }
 
     }
 
