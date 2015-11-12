@@ -7,8 +7,7 @@ public class RobotTotal extends Robot {
 
     private double totalDistance = 0;
 
-    public RobotTotal() {
-    }
+
 
     public RobotTotal(double x, double y) {
         super(x, y);

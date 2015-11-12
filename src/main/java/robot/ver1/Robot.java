@@ -1,5 +1,7 @@
 package robot.ver1;
 
+import java.util.ArrayList;
+
 /**
  *
  */
@@ -16,40 +18,39 @@ class Robot {
      * Текущий курс в (градусах).
      */
     protected double course = 0;
-    String name;
+    private ArrayList <RobotLine> lines = new ArrayList<RobotLine>();
+    private RobotListener listener;
     /**
      * Робот управляется оператором.
      */
-    Operator operator;
-
-    public Robot() {
-    }
 
     public Robot(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public Robot(String name) {
-        this.name = name;
+    public void setListener(RobotListener listener){
+        this.listener = listener;
     }
-
-    /**
-     * Можно узнать какой оператор управляет роботом
-     * @return operator .
-     */
-    public Operator getOperator() {
-        return operator;
+    void forward(int distance){
+        // Вызываем слушателя (если он установлен) в начале
+        if (listener!=null){
+        listener.startMove(x,y);
     }
+        final double xOld = x;
+        final double yOld = y;
+        x = x+distance*Math.cos(course/180*Math.PI);
+        y = y+distance*Math.sin(course/180*Math.PI);
 
-    /**
-     * Можно установить оператора для робота.
-     * @param operator .
-     */
-    public void setOperator(Operator operator) {
-        this.operator = operator;
+        if (listener == null) {
+            listener.endMove(x, y);
+        }
+
+        lines.add(new RobotLine(xOld,yOld,x,y));
     }
-
+    public ArrayList<RobotLine> getLines(){
+        return lines;
+    }
     /**
      *
      * @return x.
@@ -106,13 +107,6 @@ class Robot {
     /**
      *
      */
-    void forward(int distance){
-        x = x+distance*Math.cos(course/180*Math.PI);
-        y = y+distance*Math.sin(course/180*Math.PI);
-    }
 
-    @Override
-    public String toString() {
-        return "name = "+ name;
-    }
+
 }
