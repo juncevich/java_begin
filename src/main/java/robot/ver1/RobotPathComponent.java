@@ -3,22 +3,18 @@ package robot.ver1;
 import javax.swing.*;
 import java.awt.*;
 
-<<<<<<< HEAD
-/**
- * Created by alex on 10.11.15.
- */
-public class RobotPathComponent extends JComponent {
-=======
+
+
 public class RobotPathComponent extends JComponent
 {
->>>>>>> origin/master
+
     private Robot robot;
 
     public RobotPathComponent(Robot robot) {
         this.robot = robot;
     }
 
-<<<<<<< HEAD
+
     /**
      * Calls the UI delegate's paint method, if the UI delegate
      * is non-<code>null</code>.  We pass the delegate a copy of the
@@ -48,14 +44,13 @@ public class RobotPathComponent extends JComponent
      * @see #paint
      * @see ComponentUI
      */
-=======
->>>>>>> origin/master
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         // Перебираем все линии, которые сохранились у робота
         // Несколько позже мы разберем эту конструкицю подробно
-<<<<<<< HEAD
+
         for (RobotLine r1: robot.getLines()) {
             // Для каждой линии получаем координаты
             int x1 = (int)Math.round(r1.getX1());
@@ -67,16 +62,6 @@ public class RobotPathComponent extends JComponent
         }
     }
 }
-=======
-        for (RobotLine rl : robot.getLines()) {
-            // Для каждой линии получаем координаты
-            int x1 = (int) Math.round(rl.getX1());
-            int y1 = (int) Math.round(rl.getY1());
-            int x2 = (int) Math.round(rl.getX2());
-            int y2 = (int) Math.round(rl.getY2());
-            // И рисуем линию с координатами
-            g.drawLine(x1, y1, x2, y2);
-        }
-    }
-}
->>>>>>> origin/master
+
+
+
