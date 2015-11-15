@@ -3,13 +3,9 @@ package ui.component;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by Juncevich on 10.11.2015.
- */
-public class TriangleComponent extends JComponent {
+public class TriangleComponent extends AbstractShape {
     @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    protected void paintShape(Graphics g) {
         g.setColor(Color.green);
         g.drawLine(5,getHeight() - 10, getWidth()/2 - 5, 5);
         g.setColor(Color.MAGENTA);
@@ -17,4 +13,5 @@ public class TriangleComponent extends JComponent {
         g.setColor(Color.ORANGE);
         g.drawLine(getWidth() - 10, getHeight() - 10, 5, getHeight() - 10);
     }
+
 }

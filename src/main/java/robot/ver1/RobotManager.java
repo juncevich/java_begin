@@ -2,30 +2,24 @@ package robot.ver1;
 
 import javax.swing.*;
 
-/**
- *
- */
-public class RobotManager {
-    /**
-     *
-     * @param args All arguments.
-     */
-    public static void main(final String[] args) {
+public class RobotManager
+{
+
+    public static void main(String[] args)
+    {
         // Количество сторон многоугольника
-        final int COUNT = 12;
+        final int COUNT = 4;
         // Длина стороны
         final int SIDE = 100;
 
         Robot robot = new Robot(200, 50);
+        // Установка слушателя для робота
+        SimpleRobotListener srl = new SimpleRobotListener();
+        robot.setListener(srl);
         // Создаем замкнутую фигуру с количеством углов COUNT
         for (int i = 0; i < COUNT; i++) {
             robot.forward(SIDE);
             robot.setCourse(robot.getCourse() + 360 / COUNT);
-        }
-
-        for (int i = 0; i < 10; i++) {
-            robot.forward(SIDE);
-            robot.setCourse(robot.getCourse() + 45);
         }
 
         // Создаем форму для отрисовки пути нашего робота
@@ -33,8 +27,4 @@ public class RobotManager {
         rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         rf.setVisible(true);
     }
-
-
-
 }
-
