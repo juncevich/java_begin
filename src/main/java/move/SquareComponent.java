@@ -45,6 +45,6 @@ public class SquareComponent extends JComponent implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawRect(x,y,SQUARE_SIZE,SQUARE_SIZE);
+        g.fillRect(x,y,SQUARE_SIZE,SQUARE_SIZE);
     }
 }

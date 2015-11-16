@@ -2,14 +2,14 @@ package move;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.jar.JarFile;
 
-/**
- * Created by Alex on 16.11.2015.
- */
+
+
 public class MoveSquareFrame extends JFrame {
     public static final String UP = "UP";
     public static final String DOWN = "DOWN";
+    public static final String LEFT = "LEFT";
+    public static final String RIGHT = "RIGHT";
 
     public MoveSquareFrame() throws HeadlessException {
         SquareComponent sc = new SquareComponent();
@@ -32,6 +32,18 @@ public class MoveSquareFrame extends JFrame {
 // Кладем кнопку на самый низ формы - на юг
         add(btnDown, BorderLayout.SOUTH);
 // Устанавливаем координаты
+
+        JButton btnLeft = new JButton(LEFT);
+        btnLeft.setActionCommand(LEFT);
+        btnLeft.addActionListener(sc);
+        add(btnLeft, BorderLayout.WEST);
+
+
+        JButton btnRight = new JButton(RIGHT);
+        btnRight.setActionCommand(RIGHT);
+        btnRight.addActionListener(sc);
+        add(btnRight, BorderLayout.EAST);
+
         setBounds(100, 100,400,400);
     }
 }
