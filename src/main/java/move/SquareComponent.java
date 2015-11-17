@@ -35,6 +35,15 @@ public class SquareComponent extends JComponent implements ActionListener {
                 // Вниз двигаемся увеличением координаты Y
                 y+=STEP;
             }
+
+            if (MoveSquareFrame.LEFT.equals((btn.getActionCommand()))){
+                x-=STEP;
+            }
+
+            if (MoveSquareFrame.RIGHT.equals(btn.getActionCommand())){
+                x+=STEP;
+            }
+
 // Перерисовываем компонент для обновления экрана
             repaint();
 
