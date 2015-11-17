@@ -8,11 +8,12 @@ import java.awt.HeadlessException;
 /**
  *
  */
+@SuppressWarnings("SuspiciousNameCombination")
 class MoveSquareFrame extends JFrame {
     /**
      *
      */
-    public static final String UP = "UP";//NOPMD
+    public static final String UP = "UP"; //NOPMD
     /**
      *
      */
@@ -28,19 +29,19 @@ class MoveSquareFrame extends JFrame {
     /**
      *
      */
-    private final static int INIT_X = 100;
+    private static final int INIT_X = 100;
     /**
      *
      */
-    private final static int INIT_Y = 100;
+    private static final int INIT_Y = 100;
     /**
      *
      */
-    private final static int HEIGHT_WINDOW = 400;
+    private static final int HEIGHT_WINDOW = 400;
     /**
      *
      */
-    private final static int WIDTH_WINDOW = 400;
+    private static final int WIDTH_WINDOW = 400;
 
 
     /**
