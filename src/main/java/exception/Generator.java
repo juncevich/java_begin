@@ -4,8 +4,7 @@ public class Generator
 {
     // Данный метод описан с указанием того, что он способен кинуть
     // исключение типа SimpleException
-    public String helloMessage(String name) throws SimpleException
-    {
+    public String helloMessage(String name) throws SimpleException, FirstException, SecondException {
         if ("FIRST".equals(name)) {
             throw new FirstException("FirstException occured");
         }
