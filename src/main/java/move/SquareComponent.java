@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 // Наш класс умеет получать события от кнопки т.к. реализует интерфейс ActionListener
-public class SquareComponent extends JComponent implements ActionListener {
+class SquareComponent extends JComponent implements ActionListener {
     // Определяем константу для размера квадрата
     private static final int SQUARE_SIZE = 30;
     // Определяем константу для шага

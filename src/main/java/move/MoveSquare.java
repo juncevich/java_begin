@@ -1,14 +1,24 @@
 package move;
 
-import javax.swing.*;
+import javax.swing.WindowConstants;
 
 /**
- * Created by Alex on 16.11.2015.
+ * Main class, that start program.
  */
-public class MoveSquare {
-    public static void main(String[] args) {
+final class MoveSquare {
+    /**
+     *
+     */
+    private MoveSquare() {
+    }
 
-        MoveSquareFrame msf = new MoveSquareFrame();
+    /**
+     * The main method.
+     * @param args .
+     */
+    public static void main(final String... args) {
+
+        final MoveSquareFrame msf = new MoveSquareFrame();
 
         msf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
