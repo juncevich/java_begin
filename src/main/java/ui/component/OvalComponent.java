@@ -1,8 +1,6 @@
 package ui.component;
 
-import javax.swing.JComponent;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class OvalComponent extends AbstractShape {
     @Override
